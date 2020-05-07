@@ -1,9 +1,11 @@
+# import dependencies
 from splinter import Browser
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import re
-     
+
+# define function to get data from specified url and return scraped data     
 def get_nasa_mars_news(browser):
     url = "https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest"
     browser.visit(url)
@@ -20,6 +22,7 @@ def get_nasa_mars_news(browser):
         "news_teaser": news_teaser
     }
 
+# define function to get data from specified url and return scraped data
 def get_mars_image_url(browser):
     url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url)
@@ -38,6 +41,7 @@ def get_mars_image_url(browser):
     featured_image_url = relative_url + image_path
     return featured_image_url
 
+# define function to get data from specified url and return scraped data
 def get_mars_weather(browser):
     url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(url)
@@ -48,6 +52,7 @@ def get_mars_weather(browser):
     mars_weather = soup.find(name="span", text = re.compile(r"(InSight sol )\d*[\w\W]{1,}")).text
     return mars_weather
 
+# define function to get data from specified url and return scraped data
 def get_mars_facts(browser):
     url = "https://space-facts.com/mars/"
     browser.visit(url)
@@ -63,6 +68,7 @@ def get_mars_facts(browser):
     facts_html.replace("\n", "")
     return facts_html
 
+# define function to get data from specified url and return scraped data
 def get_mars_hemispheres(browser):
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
@@ -87,6 +93,7 @@ def get_mars_hemispheres(browser):
 
     return hemisphere_image_urls
 
+# define scrape function to execute previously defined functions and store scraped data into a dictionary
 def scrape():
     executable_path = {'executable_path': 'chromedriver.exe'}
     browser = Browser('chrome', **executable_path, headless=True)
