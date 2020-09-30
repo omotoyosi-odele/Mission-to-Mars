@@ -1,11 +1,11 @@
 # Mission to Mars
-Used tools to scrape the internet to get stuff
-Exploring web scraping and non-relational DBs to get information such as news, featured images and twitter feeds from various websites and applications 
+Exploring web scraping using Beautiful Soup, Flask to scrape the internet and a non-relational DB (MongoDB) to store data such as news, featured images, weather, geographic information and twitter feeds about planet Mars
 
-# Tools
-Beautiful Soup, Flask and Mongo DB
+# Header
+
+# Mars Facts
+
+# Mars Hemispheres in Pictures
 
 
 
-# Objective
-Scrape various websites containing information about Mars, load into Mongo DB and retrieve to create a HTML webpage with the scraped data
