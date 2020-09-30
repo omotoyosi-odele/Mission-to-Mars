@@ -4,13 +4,14 @@ Exploring web scraping using Beautiful Soup, Flask to scrape the internet and a 
 # Mars Page
 ![Header](images/Header.png)
 
-# Mars Facts
-![Header](images/HalfPage.png)
-
+# Mars Weather
+![Mars Weather](images/HalfPage.png)
 
 # Latest News
+![Mars News](images/LatestNews.png)
 
 # Mars Hemispheres in Pictures
+![Mars Hemispheres](images/Hemispheres.png)
 
 
 
